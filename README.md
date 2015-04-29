@@ -29,11 +29,9 @@ To set up server, it is necessary to change values in config.json:
  - 'mediaFolder' : path to directory, where server will look for media files;
  - 'vlcCommand'  : string to run VLC player from a command shell (/usr/bin/vlc);
  - 'socketFile'  : path to VLC RC interface socket file;
-
- - 'ip' : server's ip address,
- - 'httpPort' : port for http that enables to receive commands from clients,
+ - 'ip' : server's ip address;
+ - 'httpPort' : port for http that enables to receive commands from clients;
  - 'websocketPort' : port for websocket that enables to translate player state to clients;
-
  - 'searchTimeStep' : time shift value in seconds for forward and backward buttons.
 
 
