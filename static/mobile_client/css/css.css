@@ -1,0 +1,432 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+
+    background-color: #555555;
+
+    font-family: Helvetica, Geneva, Arial, sans-serif;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+
+
+/*----- CONTROL PANEL ------*/
+
+#controlPanel {
+    height: 100%;
+    background-color: rgb(30,30,30);
+}
+
+#titleRow {
+    height: 24%;
+    width: 74%;
+    /*background-color: red;*/
+    margin: 0px auto 0px auto;
+    padding: 0px 0px 24pt 0px;
+    display: table;
+    vertical-align: bottom;
+}
+
+#title {
+    color: rgb(170, 170, 170);
+    font-size: 12pt;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.button:active {
+    opacity: 0.6;
+}
+
+#controlButtonsRow {
+    width: 100%;
+    height: 18%;
+    /*background-color: maroon;*/
+}
+
+#rewindButton {
+    width: 34%;
+    height: 100%;
+    /*background-color: cornflowerblue;*/
+    float: left;
+    
+    background-image: url("../img/backward_w.svg");
+    background-size: auto 100%;
+    background-position: 30% 50%;
+    background-repeat: no-repeat;
+}
+
+
+#playButton {
+    width: 32%;
+    height: 100%;
+    float: left;
+    /*background-color:blanchedalmond;*/
+
+    background-image: url("../img/play_w.svg");
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#forwardButton {
+    width: 34%;
+    height: 100%;
+    /* background-color: darkslategrey; */
+    float: left;
+
+    background-image: url("../img/forward_w.svg");
+    background-size: auto 100%;
+    background-position: 70% 50%;
+    background-repeat: no-repeat;
+}
+
+#searchSliderRow {
+    width: 74%;
+    height: 7%;
+    /*background-color: cadetblue;*/
+    margin: 24pt auto 0px auto;
+}
+
+#volumeSliderRow {
+    width: 74%;
+    height: 7%;
+    /*background-color: cadetblue;*/
+    margin: 8% auto 0px auto;
+}
+
+#volumeButtonsRow {
+    width: 74%;
+    height: 12%;
+    margin: 24pt auto 0px auto;
+    /*background-color: yellowgreen;*/
+}
+
+.volumeButton {
+    width: 25%;
+    height: 100%;
+    /*background-color: indianred;*/
+    color: rgb(160, 160, 160);
+    font-size: 300%;
+}
+
+#decVButton {
+    float: left;
+    background-image: url("../img/minus.svg");
+    background-size: auto 50%;
+    background-position: 0% 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#incVButton {
+    float: right;
+    background-image: url("../img/plus.svg");
+    background-size: auto 50%;
+    background-position: 100% 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#buttonsRow {
+    width: 74%;
+    height: 12%;
+    margin: 24pt auto 0px auto;
+    /*background-color: yellowgreen;*/
+}
+
+.thinButton {
+    width: 33%;
+    height: 100%;
+    /*background-color: indianred;*/
+}
+
+.thinButtonImg {
+    width: 50%;
+    max-height: 6%;
+    height: 2pt;
+    margin: 18pt 0px 0px 0px;
+    background-color: rgb(160, 160, 160);
+}
+
+#soundButton {
+    float: left;
+}
+
+#subsButton, #subsThinButtonImg {
+    float: right;
+}
+
+
+.sliderRow {
+    display: table;
+    vertical-align: middle;
+    /*background-image: url("../img/slider_bg.svg");
+    background-size: 100% auto;
+    background-position-y: 50%;
+    background-repeat: no-repeat;*/
+}
+
+.sliderBg {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#sliderBgLine {
+    width: 74%;
+    max-height: 6%;
+    height: 2pt;
+    margin: 0px auto 0px auto;
+    position: relative;
+    padding: 0px;
+    top: -3.6%;
+    background-color: rgb(160, 160, 160);
+}
+
+.sliderHandle {
+    width: 30pt;
+    height: 30pt;
+    position: relative;
+    /*background-color: red;*/
+}
+
+#searchHandle {
+    background-image: url("../img/search_wb.svg");
+    background-size: auto 120%;
+    background-position: 50% 50%;
+    align-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+#searchHandleTooltip {
+    align-content: center;
+    color: rgb(190,190,190);
+    font-size: 80%;
+    position: relative;
+    top: -7pt;
+}
+
+.is-disabled {
+    opacity: .1;
+    pointer-events: none;
+}
+
+#conIcon {
+    float: left;
+    display: inline;
+    width: 12pt;
+    height: 12pt;
+    margin-right: 4pt;
+    background-image: url("../img/loading-spokes.svg");
+    background-size: auto 100%;
+    background-position: 50% 50%;
+}
+
+
+
+/*----- LIBRARY PANEL -----*/
+#libraryPanel {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+
+    background-color: rgb(30,30,30);
+
+    -webkit-transition: height 0.12s ease-out 0.06s;
+    transition: height 0.12s ease-out 0.06s;
+    overflow: hidden;
+}
+
+#libraryNavigator {
+    width: 100%;
+    height: 12%;
+}
+
+#backButton {
+    float: left;
+    width: 25%;
+    background-image: url("../img/back.svg");
+    background-size: 50% 50%;
+    background-position: 25% 80%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.navigatorCloseButton {
+    float: right;
+    width: 25%;
+    background-image: url("../img/close.svg");
+    background-size: 50% 50%;
+    background-position: 40% 80%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+#fileList {
+    width: 100%;
+    height: 88%;
+    position: relative;
+    top: -6%;
+
+    -webkit-transition: left 0.10s ease-out 0.06s;
+    transition: left 0.10s ease-out 0.06s;
+}
+
+/*
+.fileListPanel::-webkit-scrollbar {
+    display: none;
+}*/
+
+.fileListPanel {
+    width: 100%;
+    height: 100%;
+    float: left;
+
+    overflow: auto;
+}
+
+.fileListCont {
+    height: 100%;
+    /*padding-top: 24pt;*/
+}
+
+.fileListCont:first-child {
+    margin-top: 24pt;
+}
+
+.fileListItem {
+    width: 100%;
+    height: 36pt;
+    /*padding: 8pt 0px 8pt 0px;*/
+    white-space: nowrap;
+}
+
+.fileListItemLeft {
+    height: 11pt;
+    width: 13%;
+    float: left;
+    background-repeat: no-repeat;
+    margin-top: 11.5pt;
+}
+
+.fileListItemRight {
+    color: rgb(170,170,170);
+    height: 24pt;
+    font-size: 11pt;
+    padding-top: 12pt;
+}
+
+.folderIcon {
+    float: right;
+    background-image: url("../img/folder.svg");
+    background-size: 64% 64%;
+    background-position: right bottom;
+    width: 11pt;
+    height: 11pt;
+    margin-right: 6pt;
+    background-repeat: no-repeat;
+    opacity:0.5;
+}
+
+/*foreground*/
+
+.fileListTopForeground {
+    pointer-events:none;
+    width: 100%;
+    height: 6%;
+    position: relative;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(30,30,30,1) 30%,rgba(30,30,30,0.02) 99%,rgba(30,30,30,0) 100%);
+}
+
+
+
+/* ----- SELECTORS PANEL ------ */
+
+#selectorsPanel {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+
+    z-index: 4;
+
+    background-color: rgb(30,30,30);
+
+    -webkit-transition: height 0.12s ease-out 0.06s;
+    transition: height 0.12s ease-out 0.06s;
+    overflow: hidden;
+}
+
+#selectorsListCont {
+    height: 100%;
+}
+
+#selectorsListCont:first-child {
+    margin-top: 24pt;
+}
+
+#selectorsNavigator {
+    width: 100%;
+    height: 12%;
+}
+
+#selectorsList {
+    width: 100%;
+    height: 88%;
+    position: relative;
+    top: -6%;
+
+    -webkit-transition: left 0.10s ease-out 0.06s;
+    transition: left 0.10s ease-out 0.06s;
+}
+
+.listItemLeft {
+    height: 11pt;
+    width: 13%;
+    float: left;
+    background-repeat: no-repeat;
+    margin-top: 13.6pt;
+}
+
+.selectedIcon {
+    float: right;
+    background-size: 100% 100%;
+    background-position: right bottom;
+    width: 11pt;
+    height: 11pt;
+    margin-right: 6pt;
+    background-repeat: no-repeat;
+}
+
+.is-selected{
+    background-image: url("../img/search_w.svg");
+}
+
+
+/* --------- LOADING SCREEN --------- */
+
+#loadingScreen {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/loading-spokes.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}

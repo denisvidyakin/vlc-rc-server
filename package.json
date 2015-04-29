@@ -1,0 +1,25 @@
+{
+  "name": "vlc-rc-server",
+  "version": "0.0.1",
+
+  "dependencies": {
+    "paperboy": ">= 0.0.5",
+    "formidable": ">= 1.0.17",
+    "ws": ">= 0.4.31",
+    "vlc-rc-socket": ">= 0.0.1"
+  },
+
+  "author": {
+    "name": "Denis Vidyakin",
+    "email": "denisvidyakin@gmail.com"
+  },
+
+  "repository" :
+  { "type" : "git",
+    "url" : "https://github.com/denisvidyakin/vlc-rc-server.git"
+  },
+
+  "license": "MIT"
+}
+
+

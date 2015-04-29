@@ -1,0 +1,15 @@
+{
+"mediaFolder":"tstVideos",
+"vlcCommand":"/usr/bin/vlc",
+"socketFile":"~/vlc.sock",
+
+"ip":"127.0.0.1",
+"httpPort":"8080",
+"websocketPort":"8081",
+
+"searchTimeStep":"30",
+
+"extensionsList": ["3gp","asf","wmv","au","avi","flv","mov","mp4", "m4v", "ogm","ogg","mkv","mka","ts","mpg","mp3","mp2",
+    "nsc","nsv","nut","ra","ram","rm","rv","rmbv","a52","dts","aac","flac","dv","vid","tta","tac",
+    "ty","wav","dts","xa","vob"]
+}
